@@ -1,0 +1,72 @@
+Source: imlib2
+Section: libs
+Priority: optional
+Maintainer: Markus Koschany <apo@debian.org>
+Build-Depends:
+ debhelper-compat (= 13),
+ libbz2-dev,
+ libfreetype6-dev,
+ libgif-dev,
+ libid3tag0-dev,
+ libjpeg-dev,
+ libpng-dev,
+ libtiff-dev,
+ libwebp-dev,
+ libx11-dev,
+ libx11-xcb-dev,
+ libxcb-shm0-dev (>= 1.10~),
+ libxcb1-dev,
+ libxext-dev,
+ zlib1g-dev
+Standards-Version: 4.6.0
+Homepage: https://docs.enlightenment.org/api/imlib2/html/index.html
+Vcs-Git: https://salsa.debian.org/debian/imlib2.git
+Vcs-Browser: https://salsa.debian.org/debian/imlib2
+
+Package: libimlib2
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
+Pre-Depends:
+ ${misc:Pre-Depends}
+Multi-Arch: same
+Description: image loading, rendering, saving library
+ Imlib2 is a library that does image file loading and saving as well as
+ rendering, manipulation, arbitrary polygon support, etc.
+ .
+ It does ALL of these operations FAST. Imlib2 also tries to be highly
+ intelligent about doing them, so writing naive programs can be done easily,
+ without sacrificing speed.
+
+Package: libimlib2-dev
+Architecture: any
+Section: libdevel
+Replaces:
+ libimlib2
+Depends:
+ libbz2-dev,
+ libfreetype6-dev,
+ libgif-dev,
+ libid3tag0-dev,
+ libimlib2 (=${binary:Version}),
+ libjpeg-dev,
+ libltdl3-dev,
+ libpng-dev,
+ libtiff-dev,
+ libwebp-dev,
+ libx11-dev,
+ libxext-dev,
+ zlib1g-dev,
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: image loading, rendering, saving library (development files)
+ Imlib2 is a library that does image file loading and saving as well as
+ rendering, manipulation, arbitrary polygon support, etc.
+ .
+ It does ALL of these operations FAST. Imlib2 also tries to be highly
+ intelligent about doing them, so writing naive programs can be done easily,
+ without sacrificing speed.
+ .
+ This package provides the development files (ie. includes, static library,
+ manual pages) that allow one to build software which uses imlib2.

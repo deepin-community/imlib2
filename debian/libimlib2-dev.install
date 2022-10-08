@@ -1,0 +1,19 @@
+doc/*gif usr/share/doc/libimlib2-dev/html
+doc/*html usr/share/doc/libimlib2-dev/html
+usr/bin/imlib2-config
+usr/bin/imlib2_view
+usr/bin/imlib2_test
+usr/bin/imlib2_show
+usr/bin/imlib2_colorspace
+usr/bin/imlib2_bumpmap
+usr/bin/imlib2_load
+usr/bin/imlib2_poly
+usr/bin/imlib2_grab
+usr/bin/imlib2_conv
+usr/include
+usr/lib/*/imlib2/filters/*.la
+usr/lib/*/imlib2/loaders/*.la
+usr/lib/*/libImlib2.a
+usr/lib/*/libImlib2.la
+usr/lib/*/libImlib2.so
+usr/lib/*/pkgconfig/imlib2.pc

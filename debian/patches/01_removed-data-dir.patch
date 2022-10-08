@@ -1,0 +1,39 @@
+From: Markus Koschany <apo@debian.org>
+Date: Thu, 2 Sep 2021 09:59:50 +0200
+Subject: 01_removed-data-dir
+
+Do not install files into the data directory
+
+Forwarded: not-needed
+---
+ Makefile.am  | 2 +-
+ configure.ac | 3 ---
+ 2 files changed, 1 insertion(+), 4 deletions(-)
+
+diff --git a/Makefile.am b/Makefile.am
+index 47b2c0e..3c15f8e 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -2,7 +2,7 @@ AUTOMAKE_OPTIONS = foreign
+ 
+ ACLOCAL_AMFLAGS = -I m4
+ 
+-SUBDIRS = src data doc
++SUBDIRS = src doc
+ 
+ CLEANFILES = $(PACKAGE).spec
+ 
+diff --git a/configure.ac b/configure.ac
+index 3cf2f9b..9650cce 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -403,9 +403,6 @@ src/bin/Makefile
+ src/modules/Makefile
+ src/modules/filters/Makefile
+ src/modules/loaders/Makefile
+-data/Makefile
+-data/fonts/Makefile
+-data/images/Makefile
+ doc/Makefile
+ imlib2-config
+ README

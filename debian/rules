@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- --enable-mmx=no --disable-amd64
+
+override_dh_auto_install:
+	dh_auto_install
+	sed -i "/dependency_libs/ s/'.*'/''/" `find . -name '*.la'`
